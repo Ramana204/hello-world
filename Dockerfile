@@ -2,5 +2,10 @@
 From tomcat:8-jre8 
 
 # Maintainer 
-MAINTAINER "valaxytech@gmail.com" 
+MAINTAINER "Ramana"
+
+# copy webapp.war into tomcat webapps folder
 COPY webapp/target/webapp.war /usr/local/tomcat/webapps
+
+#run catalina.sh
+CMD ["catalina.sh", "run"]
